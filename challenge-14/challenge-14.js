@@ -74,10 +74,10 @@
   */
   console.log( '\nSeu nome na língua do "P":' );
   var name = ['wes','ley'];
-  var reduceP = name.reduce( function ( acumulado, atual ){
+  var p = name.reduce( function ( acumulado, atual ){
     return acumulado  + 'p' + atual;
   }, '');
-  console.log( reduceP );
+  console.log( p );
   /*
   Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
   e atribuirá o seu nome invertido (usando o array criado acima).
