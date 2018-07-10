@@ -83,9 +83,15 @@
     var firstValue = accumulated.slice(0, -1);
     var operator = accumulated.split('').pop();
     var lastValue = removeLastItemIfItIsAnOperator(actual);
-    var lastOperator = isLastItemAnOperation(actual) ? actual.split('').pop() : '';
+    var lastOperator = getLastOperator(actual);
     return doOperation(operator, firstValue, lastValue) + lastOperator;
   }
+
+  function getLastOperator(value){
+    return isLastItemAnOperation(value) ? actual.split('').pop() : '';
+
+  }
+
 
   function doOperation(operator, firstValue, lastValue){
     switch(operator) {
